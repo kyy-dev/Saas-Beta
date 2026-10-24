@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Ubah gambar menjadi PDF atau hapus background dari satu halaman yang mudah digunakan."
+    >
+    <title>Ruang Gambar | Alat gambar untuk sehari-hari</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Lewati ke konten</a>
+
+    <header class="site-header">
+      <nav class="navigation" aria-label="Navigasi utama">
+        <a class="wordmark" href="#home" aria-label="Ruang Gambar, halaman utama">
+          <span class="wordmark-mark" aria-hidden="true">rg</span>
+          <span>ruang<span class="wordmark-light">gambar</span></span>
+        </a>
+        <div class="navigation-links">
+          <a href="#tools">Alat</a>
+          <a href="#benefits">Keunggulan</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero page-shell" id="home" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Alat gambar, dalam satu tempat</p>
+          <h1 id="hero-title">Rapikan gambar, tanpa pindah aplikasi.</h1>
+          <p class="hero-description">
+            Ubah foto menjadi PDF atau siapkan gambar untuk penghapusan background.
+            Pilih alat yang sesuai dengan pekerjaanmu.
+          </p>
+          <a class="text-link" href="#tools">Lihat pilihan alat</a>
+          <p class="prototype-note">
+            Pratinjau file berjalan di browser. Pemrosesan PDF dan background remover
+            perlu disambungkan ke layanan.
+          </p>
+        </div>
+
+        <div class="upload-panel">
+          <div class="upload-heading">
+            <span class="upload-index" aria-hidden="true">01</span>
+            <div>
+              <h2>Mulai dari sebuah gambar</h2>
+              <p>Pilih JPG, PNG, atau WebP dari perangkatmu.</p>
+            </div>
+          </div>
+          <div class="drop-zone" id="pdf-drop-zone">
+            <input
+              class="visually-hidden"
+              id="pdf-file"
+              type="file"
+              accept="image/jpeg,image/png,image/webp"
+              aria-describedby="pdf-status"
+            >
+            <label class="drop-zone-content" for="pdf-file">
+              <span class="upload-symbol" aria-hidden="true">
+                <svg viewBox="0 0 32 32" focusable="false">
+                  <path d="M16 21V5m0 0-6 6m6-6 6 6M6 19v7h20v-7" />
+                </svg>
+              </span>
+              <span class="drop-primary">Tarik gambar ke sini</span>
+              <span class="drop-secondary">atau pilih dari perangkat</span>
+              <span class="button button-dark">Pilih gambar</span>
+            </label>
+            <img class="upload-preview" id="pdf-preview" alt="" hidden>
+          </div>
+          <p class="file-status" id="pdf-status" role="status" aria-live="polite">
+            Belum ada gambar dipilih.
+          </p>
+          <p class="file-limit">Satu gambar untuk pratinjau. Maksimal 15 MB.</p>
+        </div>
+      </section>
+
+      <section class="tools-section page-shell" id="tools" aria-labelledby="tools-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Pilih pekerjaan</p>
+            <h2 id="tools-title">Dua alat, satu alur yang jelas.</h2>
+          </div>
+          <p class="section-intro">
+            Unggah gambar untuk melihat pratinjau lokal. Layanan pemrosesan dapat
+            dihubungkan sesuai kebutuhan produk.
+          </p>
+        </div>
+
+        <div class="tools-grid">
+          <article class="tool-card tool-card-pdf" aria-labelledby="pdf-title">
+            <div class="tool-art tool-art-document" aria-hidden="true">
+              <span class="paper-shape">
+                <span class="paper-fold"></span>
+                <span class="paper-label">PDF</span>
+                <span class="paper-line"></span>
+                <span class="paper-line paper-line-short"></span>
+              </span>
+              <span class="art-caption">GAMBAR&nbsp; / &nbsp;DOKUMEN</span>
+            </div>
+            <div class="tool-card-copy">
+              <p class="tool-number">ALAT 01</p>
+              <h3 id="pdf-title">Image to PDF Converter</h3>
+              <p>
+                Siapkan gambar untuk alur konversi PDF. File yang dipilih akan
+                ditampilkan sebagai pratinjau di browser.
+              </p>
+              <label class="button button-accent" for="pdf-file">Pilih gambar untuk PDF</label>
+              <p class="tool-status" id="pdf-tool-status" aria-live="polite">
+                Konversi PDF belum terhubung.
+              </p>
+            </div>
+          </article>
+
+          <article class="tool-card tool-card-remover" aria-labelledby="remover-title">
+            <div class="tool-art tool-art-background" aria-hidden="true">
+              <span class="subject-shape"></span>
+              <span class="art-caption">SUBJEK&nbsp; / &nbsp;BACKGROUND</span>
+            </div>
+            <div class="tool-card-copy">
+              <p class="tool-number">ALAT 02</p>
+              <h3 id="remover-title">AI Background Remover <span>(Tanpa Adobe)</span></h3>
+              <p>
+                Pilih gambar untuk menyiapkan alur hapus background. Penghapusan
+                belum aktif sebelum layanan pemroses terhubung.
+              </p>
+              <input
+                class="visually-hidden"
+                id="remover-file"
+                type="file"
+                accept="image/jpeg,image/png,image/webp"
+                aria-describedby="remover-status"
+              >
+              <label class="button button-outline" for="remover-file">
+                Pilih gambar untuk remover
+              </label>
+              <p class="tool-status" id="remover-status" role="status" aria-live="polite">
+                Penghapusan background belum terhubung.
+              </p>
+            </div>
+          </article>
+        </div>
+        <p class="integration-note">
+          Catatan demo: pemilihan dan pratinjau file sudah aktif. Hasil PDF atau
+          gambar tanpa background memerlukan integrasi pemrosesan.
+        </p>
+      </section>
+
+      <section class="benefits-section" id="benefits" aria-labelledby="benefits-title">
+        <div class="benefits-layout page-shell">
+          <div class="benefits-intro">
+            <p class="eyebrow">Dibuat untuk tugas sehari-hari</p>
+            <h2 id="benefits-title">Mulai dari browser. Sesederhana itu.</h2>
+            <p>
+              Tidak perlu memasang aplikasi untuk mencoba alur pilih gambar dan
+              melihat pratinjau.
+            </p>
+          </div>
+          <ul class="benefits-list">
+            <li>
+              <span class="benefit-mark" aria-hidden="true">01</span>
+              <div>
+                <h3>Tanpa instalasi</h3>
+                <p>Buka halaman ini lewat browser di perangkatmu.</p>
+              </div>
+            </li>
+            <li>
+              <span class="benefit-mark" aria-hidden="true">02</span>
+              <div>
+                <h3>Pratinjau tanpa unggah</h3>
+                <p>Demo membaca file di browser, jadi pratinjau tidak menunggu unggahan ke server.</p>
+              </div>
+            </li>
+            <li>
+              <span class="benefit-mark" aria-hidden="true">03</span>
+              <div>
+                <h3>Status yang mudah dipahami</h3>
+                <p>Halaman memberi tahu saat file siap dipratinjau atau tidak didukung.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="page-shell footer-inner">
+        <a class="wordmark footer-wordmark" href="#home">
+          <span class="wordmark-mark" aria-hidden="true">rg</span>
+          <span>ruang<span class="wordmark-light">gambar</span></span>
+        </a>
+        <p>Pratinjau gambar di browser. Pemrosesan perlu layanan terhubung.</p>
+        <a class="footer-top-link" href="#home">Kembali ke atas</a>
+      </div>
+    </footer>
+
+    <script>
+      const supportedTypes = new Set(["image/jpeg", "image/png", "image/webp"]);
+      const maximumFileSize = 15 * 1024 * 1024;
+
+      function connectImagePicker(inputId, statusId, previewId, readyMessage, secondaryStatusId) {
+        const input = document.getElementById(inputId);
+        const status = document.getElementById(statusId);
+        const secondaryStatus = secondaryStatusId
+          ? document.getElementById(secondaryStatusId)
+          : null;
+        const preview = previewId ? document.getElementById(previewId) : null;
+        let previewUrl = null;
+
+        function setStatus(message) {
+          status.textContent = message;
+          if (secondaryStatus) secondaryStatus.textContent = message;
+        }
+
+        function showError(message) {
+          if (preview) {
+            preview.hidden = true;
+            preview.removeAttribute("src");
+          }
+          if (previewUrl) {
+            URL.revokeObjectURL(previewUrl);
+            previewUrl = null;
+          }
+          setStatus(message);
+        }
+
+        function processFile(file) {
+          if (!file) {
+            setStatus("Belum ada gambar dipilih.");
+            if (preview) preview.hidden = true;
+            return;
+          }
+
+          if (!supportedTypes.has(file.type)) {
+            showError("Format tidak didukung. Pilih gambar JPG, PNG, atau WebP.");
+            return;
+          }
+
+          if (file.size > maximumFileSize) {
+            showError("Ukuran gambar melebihi 15 MB. Pilih file yang lebih kecil.");
+            return;
+          }
+
+          setStatus("Memuat pratinjau gambar...");
+          if (preview) preview.hidden = true;
+          if (previewUrl) {
+            URL.revokeObjectURL(previewUrl);
+            previewUrl = null;
+          }
+          const imageUrl = URL.createObjectURL(file);
+          const image = new Image();
+
+          image.addEventListener("load", () => {
+            if (preview) {
+              previewUrl = imageUrl;
+              preview.src = previewUrl;
+              preview.alt = `Pratinjau ${file.name}`;
+              preview.hidden = false;
+            } else {
+              URL.revokeObjectURL(imageUrl);
+            }
+
+            setStatus(`${file.name} siap dipratinjau. ${readyMessage}`);
+          });
+
+          image.addEventListener("error", () => {
+            URL.revokeObjectURL(imageUrl);
+            showError("Gambar tidak dapat dibaca. Coba pilih file lain.");
+          });
+
+          image.src = imageUrl;
+        }
+
+        input.addEventListener("change", () => processFile(input.files[0]));
+        return processFile;
+      }
+
+      const processPdfImage = connectImagePicker(
+        "pdf-file",
+        "pdf-status",
+        "pdf-preview",
+        "Konversi PDF belum terhubung.",
+        "pdf-tool-status"
+      );
+      connectImagePicker(
+        "remover-file",
+        "remover-status",
+        null,
+        "Penghapusan background belum terhubung."
+      );
+
+      const dropZone = document.getElementById("pdf-drop-zone");
+      const pdfInput = document.getElementById("pdf-file");
+
+      dropZone.addEventListener("dragover", (event) => {
+        event.preventDefault();
+        dropZone.classList.add("is-dragging");
+      });
+
+      dropZone.addEventListener("dragleave", (event) => {
+        if (!dropZone.contains(event.relatedTarget)) {
+          dropZone.classList.remove("is-dragging");
+        }
+      });
+
+      dropZone.addEventListener("drop", (event) => {
+        event.preventDefault();
+        dropZone.classList.remove("is-dragging");
+        const file = event.dataTransfer.files[0];
+        if (!file) return;
+
+        const transfer = new DataTransfer();
+        transfer.items.add(file);
+        pdfInput.files = transfer.files;
+        processPdfImage(file);
+      });
+    </script>
+  </body>
+</html>
