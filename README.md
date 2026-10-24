@@ -11,6 +11,13 @@ Landing page untuk alat pengolahan gambar: **Image to PDF Converter** dan **AI B
 
 > **Status fitur:** rilis ini adalah prototipe antarmuka. Konversi ke PDF dan penghapusan background belum tersedia; keduanya memerlukan integrasi layanan pemrosesan.
 
+## Metode Pengembangan Proyek
+
+Proyek ini dibangun menggunakan pendekatan hibrida antara otomatisasi kecerdasan buatan (*AI-assisted*) dan kontrol logika manusia:
+
+- **Frontend Development**: Antarmuka pengguna dan struktur tata letak dioptimalkan menggunakan bantuan agen AI untuk efisiensi kecepatan dan implementasi desain.
+- **Backend & Business Logic**: Seluruh alur logika, pengkodean sistem, serta penanganan fungsionalitas inti dikembangkan dan dikelola sepenuhnya secara manual melalui logika pemrograman murni untuk memastikan keamanan dan kontrol penuh.
+
 ## Fitur
 
 - **Image to PDF Converter:** pilih gambar JPG, PNG, atau WebP dan lihat pratinjau. Pembuatan PDF belum diaktifkan.
@@ -56,13 +63,12 @@ Jika format tidak didukung, file melebihi batas ukuran, atau browser tidak dapat
 ## Struktur proyek
 
 ```text
-Saas-Platform/
-├── Frontend/
-│   ├── css/
-│   │   └── style.css
-│   └── index.html
-├── package.json
-└── README.md
+ Saas Platform (Folder Utama / Root)
+ ┣  css
+ ┃  ┗  style.css
+ ┣  index.html
+ ┣  package.json
+ ┗  README.md
 ```
 
 ## Rilis
