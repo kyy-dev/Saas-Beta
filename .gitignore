@@ -1,0 +1,11 @@
+.env
+
+.agents/
+.claude/
+.cline/
+.cursor/
+.gemini/
+
+AGENTS.md
+CLAUDE.md
+GEMINI.md
