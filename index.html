@@ -5,316 +5,420 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta
       name="description"
-      content="Ubah gambar menjadi PDF atau hapus background dari satu halaman yang mudah digunakan."
+      content="Pilih gambar, tentukan pekerjaan, dan siapkan hasilnya di PixelShift."
     >
-    <title>Ruang Gambar | Alat gambar untuk sehari-hari</title>
+    <meta name="theme-color" content="#f4f1e8">
+    <title>PixelShift | Olah gambar di satu workspace</title>
     <link rel="stylesheet" href="Frontend/css/style.css">
   </head>
   <body>
-    <a class="skip-link" href="#main">Lewati ke konten</a>
+    <a class="skip-link" href="#main">Lewati ke workspace</a>
 
     <header class="site-header">
-      <nav class="navigation" aria-label="Navigasi utama">
-        <a class="wordmark" href="#home" aria-label="Ruang Gambar, halaman utama">
-          <span class="wordmark-mark" aria-hidden="true">rg</span>
-          <span>ruang<span class="wordmark-light">gambar</span></span>
-        </a>
-        <div class="navigation-links">
-          <a href="#tools">Alat</a>
-          <a href="#benefits">Keunggulan</a>
-        </div>
-      </nav>
+      <a class="wordmark" href="#main" aria-label="PixelShift, workspace">
+        <span class="wordmark-mark" aria-hidden="true">P</span>
+        <span>PixelShift</span>
+      </a>
+      <span class="header-context">Workspace gambar</span>
     </header>
 
-    <main id="main">
-      <section class="hero page-shell" id="home" aria-labelledby="hero-title">
-        <div class="hero-copy">
-          <p class="eyebrow">Alat gambar, dalam satu tempat</p>
-          <h1 id="hero-title">Rapikan gambar, tanpa pindah aplikasi.</h1>
-          <p class="hero-description">
-            Ubah foto menjadi PDF atau siapkan gambar untuk penghapusan background.
-            Pilih alat yang sesuai dengan pekerjaanmu.
-          </p>
-          <a class="text-link" href="#tools">Lihat pilihan alat</a>
-          <p class="prototype-note">
-            Pratinjau file berjalan di browser. Pemrosesan PDF dan background remover
-            perlu disambungkan ke layanan.
+    <main id="main" class="workspace-shell">
+      <section class="workspace" aria-labelledby="workspace-title">
+        <div class="workspace-heading">
+          <p class="eyebrow">PixelShift / Workspace</p>
+          <h1 id="workspace-title">Pilih gambar untuk diproses.</h1>
+          <p class="workspace-description">
+            Unggah satu gambar, pilih pekerjaan, lalu simpan hasilnya dari halaman ini.
           </p>
         </div>
 
-        <div class="upload-panel">
-          <div class="upload-heading">
-            <span class="upload-index" aria-hidden="true">01</span>
-            <div>
-              <h2>Mulai dari sebuah gambar</h2>
-              <p>Pilih JPG, PNG, atau WebP dari perangkatmu.</p>
+        <div class="workbench">
+          <section class="upload-column" aria-labelledby="upload-title">
+            <div class="section-label">
+              <span class="step-number" aria-hidden="true">01</span>
+              <div>
+                <h2 id="upload-title">Tambahkan gambar</h2>
+                <p>JPG, PNG, atau WebP. Maksimal 15 MB.</p>
+              </div>
             </div>
-          </div>
-          <div class="drop-zone" id="pdf-drop-zone">
+
             <input
               class="visually-hidden"
-              id="pdf-file"
+              id="image-file"
               type="file"
               accept="image/jpeg,image/png,image/webp"
-              aria-describedby="pdf-status"
+              aria-describedby="file-status"
             >
-            <label class="drop-zone-content" for="pdf-file">
-              <span class="upload-symbol" aria-hidden="true">
-                <svg viewBox="0 0 32 32" focusable="false">
-                  <path d="M16 21V5m0 0-6 6m6-6 6 6M6 19v7h20v-7" />
-                </svg>
-              </span>
-              <span class="drop-primary">Tarik gambar ke sini</span>
-              <span class="drop-secondary">atau pilih dari perangkat</span>
-              <span class="button button-dark">Pilih gambar</span>
-            </label>
-            <img class="upload-preview" id="pdf-preview" alt="" hidden>
-          </div>
-          <p class="file-status" id="pdf-status" role="status" aria-live="polite">
-            Belum ada gambar dipilih.
-          </p>
-          <p class="file-limit">Satu gambar untuk pratinjau. Maksimal 15 MB.</p>
-        </div>
-      </section>
-
-      <section class="tools-section page-shell" id="tools" aria-labelledby="tools-title">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow">Pilih pekerjaan</p>
-            <h2 id="tools-title">Dua alat, satu alur yang jelas.</h2>
-          </div>
-          <p class="section-intro">
-            Unggah gambar untuk melihat pratinjau lokal. Layanan pemrosesan dapat
-            dihubungkan sesuai kebutuhan produk.
-          </p>
-        </div>
-
-        <div class="tools-grid">
-          <article class="tool-card tool-card-pdf" aria-labelledby="pdf-title">
-            <div class="tool-art tool-art-document" aria-hidden="true">
-              <span class="paper-shape">
-                <span class="paper-fold"></span>
-                <span class="paper-label">PDF</span>
-                <span class="paper-line"></span>
-                <span class="paper-line paper-line-short"></span>
-              </span>
-              <span class="art-caption">GAMBAR&nbsp; / &nbsp;DOKUMEN</span>
-            </div>
-            <div class="tool-card-copy">
-              <p class="tool-number">ALAT 01</p>
-              <h3 id="pdf-title">Image to PDF Converter</h3>
-              <p>
-                Siapkan gambar untuk alur konversi PDF. File yang dipilih akan
-                ditampilkan sebagai pratinjau di browser.
-              </p>
-              <label class="button button-accent" for="pdf-file">Pilih gambar untuk PDF</label>
-              <p class="tool-status" id="pdf-tool-status" aria-live="polite">
-                Konversi PDF belum terhubung.
-              </p>
-            </div>
-          </article>
-
-          <article class="tool-card tool-card-remover" aria-labelledby="remover-title">
-            <div class="tool-art tool-art-background" aria-hidden="true">
-              <span class="subject-shape"></span>
-              <span class="art-caption">SUBJEK&nbsp; / &nbsp;BACKGROUND</span>
-            </div>
-            <div class="tool-card-copy">
-              <p class="tool-number">ALAT 02</p>
-              <h3 id="remover-title">AI Background Remover <span>(Tanpa Adobe)</span></h3>
-              <p>
-                Pilih gambar untuk menyiapkan alur hapus background. Penghapusan
-                belum aktif sebelum layanan pemroses terhubung.
-              </p>
-              <input
-                class="visually-hidden"
-                id="remover-file"
-                type="file"
-                accept="image/jpeg,image/png,image/webp"
-                aria-describedby="remover-status"
-              >
-              <label class="button button-outline" for="remover-file">
-                Pilih gambar untuk remover
+            <div class="dropzone" id="dropzone" data-state="empty">
+              <label class="dropzone-prompt" for="image-file">
+                <span class="upload-mark" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" focusable="false">
+                    <path d="M12 16V4m0 0L7 9m5-5 5 5M4 15v5h16v-5" />
+                  </svg>
+                </span>
+                <span class="dropzone-title">Seret gambar ke sini</span>
+                <span class="dropzone-detail">atau pilih dari perangkat</span>
+                <span class="button button-dark">Pilih gambar</span>
               </label>
-              <p class="tool-status" id="remover-status" role="status" aria-live="polite">
-                Penghapusan background belum terhubung.
+              <img class="image-preview" id="image-preview" alt="" hidden>
+            </div>
+
+            <div class="file-row">
+              <p class="file-status" id="file-status" role="status" aria-live="polite">
+                Belum ada gambar. Pilih file untuk memulai.
+              </p>
+              <button class="text-button" id="replace-file" type="button" hidden>
+                Ganti gambar
+              </button>
+            </div>
+          </section>
+
+          <section class="action-column" aria-labelledby="action-title">
+            <div class="section-label">
+              <span class="step-number" aria-hidden="true">02</span>
+              <div>
+                <h2 id="action-title">Pilih pekerjaan</h2>
+                <p>Hasil diproses dari gambar yang sama.</p>
+              </div>
+            </div>
+
+            <fieldset class="tool-options">
+              <legend class="visually-hidden">Pekerjaan gambar</legend>
+              <label class="tool-option">
+                <input type="radio" name="tool" value="pdf">
+                <span class="tool-option-copy">
+                  <span class="tool-option-title">Konversi ke PDF</span>
+                  <span class="tool-option-detail">Satu gambar menjadi satu halaman PDF.</span>
+                </span>
+                <span class="option-mark" aria-hidden="true"></span>
+              </label>
+              <label class="tool-option">
+                <input type="radio" name="tool" value="background">
+                <span class="tool-option-copy">
+                  <span class="tool-option-title">Hapus background</span>
+                  <span class="tool-option-detail">Layanan pemrosesan belum terhubung.</span>
+                </span>
+                <span class="option-mark" aria-hidden="true"></span>
+              </label>
+            </fieldset>
+
+            <div class="action-footer">
+              <button class="button button-primary" id="process-button" type="button" disabled>
+                Pilih pekerjaan
+              </button>
+              <p class="action-note" id="action-note">
+                File tetap di perangkat saat dikonversi ke PDF.
               </p>
             </div>
-          </article>
+          </section>
         </div>
-        <p class="integration-note">
-          Catatan demo: pemilihan dan pratinjau file sudah aktif. Hasil PDF atau
-          gambar tanpa background memerlukan integrasi pemrosesan.
-        </p>
-      </section>
 
-      <section class="benefits-section" id="benefits" aria-labelledby="benefits-title">
-        <div class="benefits-layout page-shell">
-          <div class="benefits-intro">
-            <p class="eyebrow">Dibuat untuk tugas sehari-hari</p>
-            <h2 id="benefits-title">Mulai dari browser. Sesederhana itu.</h2>
-            <p>
-              Tidak perlu memasang aplikasi untuk mencoba alur pilih gambar dan
-              melihat pratinjau.
-            </p>
+        <div class="result-panel" id="result-panel" data-state="empty" aria-live="polite" hidden>
+          <div>
+            <p class="result-label">Hasil</p>
+            <p class="result-message" id="result-message"></p>
           </div>
-          <ul class="benefits-list">
-            <li>
-              <span class="benefit-mark" aria-hidden="true">01</span>
-              <div>
-                <h3>Tanpa instalasi</h3>
-                <p>Buka halaman ini lewat browser di perangkatmu.</p>
-              </div>
-            </li>
-            <li>
-              <span class="benefit-mark" aria-hidden="true">02</span>
-              <div>
-                <h3>Pratinjau tanpa unggah</h3>
-                <p>Demo membaca file di browser, jadi pratinjau tidak menunggu unggahan ke server.</p>
-              </div>
-            </li>
-            <li>
-              <span class="benefit-mark" aria-hidden="true">03</span>
-              <div>
-                <h3>Status yang mudah dipahami</h3>
-                <p>Halaman memberi tahu saat file siap dipratinjau atau tidak didukung.</p>
-              </div>
-            </li>
-          </ul>
+          <a class="button button-download" id="download-link" hidden>Unduh PDF</a>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <div class="page-shell footer-inner">
-        <a class="wordmark footer-wordmark" href="#home">
-          <span class="wordmark-mark" aria-hidden="true">rg</span>
-          <span>ruang<span class="wordmark-light">gambar</span></span>
-        </a>
-        <p>Pratinjau gambar di browser. Pemrosesan perlu layanan terhubung.</p>
-        <a class="footer-top-link" href="#home">Kembali ke atas</a>
-      </div>
+      <span>PixelShift</span>
+      <span>Konversi PDF berjalan di browser. Hapus background belum tersedia.</span>
     </footer>
 
     <script>
       const supportedTypes = new Set(["image/jpeg", "image/png", "image/webp"]);
       const maximumFileSize = 15 * 1024 * 1024;
+      const fileInput = document.getElementById("image-file");
+      const dropzone = document.getElementById("dropzone");
+      const preview = document.getElementById("image-preview");
+      const fileStatus = document.getElementById("file-status");
+      const replaceButton = document.getElementById("replace-file");
+      const processButton = document.getElementById("process-button");
+      const actionNote = document.getElementById("action-note");
+      const resultPanel = document.getElementById("result-panel");
+      const resultMessage = document.getElementById("result-message");
+      const downloadLink = document.getElementById("download-link");
+      const toolInputs = document.querySelectorAll('input[name="tool"]');
 
-      function connectImagePicker(inputId, statusId, previewId, readyMessage, secondaryStatusId) {
-        const input = document.getElementById(inputId);
-        const status = document.getElementById(statusId);
-        const secondaryStatus = secondaryStatusId
-          ? document.getElementById(secondaryStatusId)
-          : null;
-        const preview = previewId ? document.getElementById(previewId) : null;
-        let previewUrl = null;
+      let currentFile = null;
+      let previewUrl = null;
+      let resultBlob = null;
+      let resultUrl = null;
+      let selectedTool = "";
+      let isProcessing = false;
+      let statusState = "empty";
 
-        function setStatus(message) {
-          status.textContent = message;
-          if (secondaryStatus) secondaryStatus.textContent = message;
-        }
-
-        function showError(message) {
-          if (preview) {
-            preview.hidden = true;
-            preview.removeAttribute("src");
-          }
-          if (previewUrl) {
-            URL.revokeObjectURL(previewUrl);
-            previewUrl = null;
-          }
-          setStatus(message);
-        }
-
-        function processFile(file) {
-          if (!file) {
-            setStatus("Belum ada gambar dipilih.");
-            if (preview) preview.hidden = true;
-            return;
-          }
-
-          if (!supportedTypes.has(file.type)) {
-            showError("Format tidak didukung. Pilih gambar JPG, PNG, atau WebP.");
-            return;
-          }
-
-          if (file.size > maximumFileSize) {
-            showError("Ukuran gambar melebihi 15 MB. Pilih file yang lebih kecil.");
-            return;
-          }
-
-          setStatus("Memuat pratinjau gambar...");
-          if (preview) preview.hidden = true;
-          if (previewUrl) {
-            URL.revokeObjectURL(previewUrl);
-            previewUrl = null;
-          }
-          const imageUrl = URL.createObjectURL(file);
-          const image = new Image();
-
-          image.addEventListener("load", () => {
-            if (preview) {
-              previewUrl = imageUrl;
-              preview.src = previewUrl;
-              preview.alt = `Pratinjau ${file.name}`;
-              preview.hidden = false;
-            } else {
-              URL.revokeObjectURL(imageUrl);
-            }
-
-            setStatus(`${file.name} siap dipratinjau. ${readyMessage}`);
-          });
-
-          image.addEventListener("error", () => {
-            URL.revokeObjectURL(imageUrl);
-            showError("Gambar tidak dapat dibaca. Coba pilih file lain.");
-          });
-
-          image.src = imageUrl;
-        }
-
-        input.addEventListener("change", () => processFile(input.files[0]));
-        return processFile;
+      function setFileStatus(message, state = "ready") {
+        statusState = state;
+        fileStatus.textContent = message;
+        fileStatus.dataset.state = state;
+        dropzone.dataset.state = state;
       }
 
-      const processPdfImage = connectImagePicker(
-        "pdf-file",
-        "pdf-status",
-        "pdf-preview",
-        "Konversi PDF belum terhubung.",
-        "pdf-tool-status"
-      );
-      connectImagePicker(
-        "remover-file",
-        "remover-status",
-        null,
-        "Penghapusan background belum terhubung."
-      );
+      function clearResult() {
+        resultBlob = null;
+        if (resultUrl) {
+          URL.revokeObjectURL(resultUrl);
+          resultUrl = null;
+        }
+        resultPanel.hidden = true;
+        resultPanel.dataset.state = "empty";
+        downloadLink.hidden = true;
+        downloadLink.removeAttribute("href");
+      }
 
-      const dropZone = document.getElementById("pdf-drop-zone");
-      const pdfInput = document.getElementById("pdf-file");
+      function updateAction() {
+        const readyToConvert = currentFile && selectedTool === "pdf" && !isProcessing;
+        const backgroundUnavailable = selectedTool === "background";
 
-      dropZone.addEventListener("dragover", (event) => {
-        event.preventDefault();
-        dropZone.classList.add("is-dragging");
+        processButton.disabled = !readyToConvert || Boolean(resultBlob);
+        processButton.textContent = isProcessing
+          ? "Membuat PDF..."
+          : resultBlob
+            ? "PDF selesai"
+            : selectedTool === "pdf"
+              ? "Buat PDF"
+              : backgroundUnavailable
+                ? "Layanan belum tersedia"
+                : "Pilih pekerjaan";
+
+        actionNote.textContent = backgroundUnavailable
+          ? "Penghapusan background belum aktif karena layanan pemrosesan belum terhubung."
+          : "File tetap di perangkat saat dikonversi ke PDF.";
+      }
+
+      function clearPreview() {
+        if (previewUrl) {
+          URL.revokeObjectURL(previewUrl);
+          previewUrl = null;
+        }
+        preview.removeAttribute("src");
+        preview.hidden = true;
+      }
+
+      function acceptFile(file) {
+        if (!file) return;
+
+        clearResult();
+        if (!supportedTypes.has(file.type)) {
+          currentFile = null;
+          clearPreview();
+          replaceButton.hidden = true;
+          fileInput.value = "";
+          setFileStatus("Format tidak didukung. Pilih JPG, PNG, atau WebP.", "error");
+          updateAction();
+          return;
+        }
+
+        if (file.size > maximumFileSize) {
+          currentFile = null;
+          clearPreview();
+          replaceButton.hidden = true;
+          fileInput.value = "";
+          setFileStatus("File melebihi 15 MB. Pilih gambar yang lebih kecil.", "error");
+          updateAction();
+          return;
+        }
+
+        currentFile = file;
+        clearPreview();
+        previewUrl = URL.createObjectURL(file);
+        preview.src = previewUrl;
+        preview.alt = `Pratinjau ${file.name}`;
+        preview.hidden = false;
+        replaceButton.hidden = false;
+        fileInput.value = "";
+        setFileStatus(`${file.name} siap. Pilih pekerjaan untuk melanjutkan.`);
+        updateAction();
+      }
+
+      preview.addEventListener("error", () => {
+        if (!previewUrl || preview.currentSrc !== previewUrl) return;
+        currentFile = null;
+        clearPreview();
+        replaceButton.hidden = true;
+        clearResult();
+        setFileStatus("Gambar tidak dapat dibaca. Pilih file gambar lain.", "error");
+        updateAction();
       });
 
-      dropZone.addEventListener("dragleave", (event) => {
-        if (!dropZone.contains(event.relatedTarget)) {
-          dropZone.classList.remove("is-dragging");
+      function concatenateBytes(chunks) {
+        const totalLength = chunks.reduce((total, chunk) => total + chunk.length, 0);
+        const output = new Uint8Array(totalLength);
+        let offset = 0;
+        for (const chunk of chunks) {
+          output.set(chunk, offset);
+          offset += chunk.length;
+        }
+        return output;
+      }
+
+      function createPdfBytes(jpegBytes, width, height) {
+        const encoder = new TextEncoder();
+        const objects = [
+          encoder.encode("1 0 obj\n<< /Type /Catalog /Pages 2 0 R >>\nendobj\n"),
+          encoder.encode("2 0 obj\n<< /Type /Pages /Kids [3 0 R] /Count 1 >>\nendobj\n"),
+          encoder.encode(
+            `3 0 obj\n<< /Type /Page /Parent 2 0 R /MediaBox [0 0 ${width} ${height}] ` +
+            "/Resources << /XObject << /Image 4 0 R >> >> /Contents 5 0 R >>\nendobj\n"
+          ),
+          concatenateBytes([
+            encoder.encode(
+              `4 0 obj\n<< /Type /XObject /Subtype /Image /Width ${width} /Height ${height} ` +
+              `/ColorSpace /DeviceRGB /BitsPerComponent 8 /Filter /DCTDecode ` +
+              `/Length ${jpegBytes.length} >>\nstream\n`
+            ),
+            jpegBytes,
+            encoder.encode("\nendstream\nendobj\n")
+          ]),
+          encoder.encode(
+            `5 0 obj\n<< /Length ${encoder.encode(
+              `q\n${width} 0 0 ${height} 0 0 cm\n/Image Do\nQ\n`
+            ).length} >>\nstream\nq\n${width} 0 0 ${height} 0 0 cm\n/Image Do\nQ\n` +
+            "endstream\nendobj\n"
+          )
+        ];
+        const header = encoder.encode("%PDF-1.4\n%\u00e2\u00e3\u00cf\u00d3\n");
+        const offsets = [0];
+        let byteOffset = header.length;
+
+        for (const object of objects) {
+          offsets.push(byteOffset);
+          byteOffset += object.length;
+        }
+
+        const xrefOffset = byteOffset;
+        const xref = encoder.encode(
+          `xref\n0 ${objects.length + 1}\n0000000000 65535 f \n` +
+          offsets.slice(1).map((offset) => `${String(offset).padStart(10, "0")} 00000 n \n`).join("") +
+          `trailer\n<< /Size ${objects.length + 1} /Root 1 0 R >>\n` +
+          `startxref\n${xrefOffset}\n%%EOF`
+        );
+
+        return concatenateBytes([header, ...objects, xref]);
+      }
+
+      async function makePdf(file) {
+        const bitmap = await createImageBitmap(file);
+        try {
+          const canvas = document.createElement("canvas");
+          canvas.width = bitmap.width;
+          canvas.height = bitmap.height;
+          const context = canvas.getContext("2d");
+          if (!context) throw new Error("Canvas tidak tersedia di browser ini.");
+
+          context.fillStyle = "#ffffff";
+          context.fillRect(0, 0, canvas.width, canvas.height);
+          context.drawImage(bitmap, 0, 0);
+
+          const jpegBlob = await new Promise((resolve, reject) => {
+            canvas.toBlob((blob) => {
+              if (blob) resolve(blob);
+              else reject(new Error("Gambar tidak dapat disiapkan sebagai PDF."));
+            }, "image/jpeg", 0.92);
+          });
+          const jpegBytes = new Uint8Array(await jpegBlob.arrayBuffer());
+          const pdfBytes = createPdfBytes(jpegBytes, canvas.width, canvas.height);
+          return new Blob([pdfBytes], { type: "application/pdf" });
+        } finally {
+          bitmap.close();
+        }
+      }
+
+      function downloadPdf() {
+        if (!resultBlob) return;
+        const url = URL.createObjectURL(resultBlob);
+        const link = document.createElement("a");
+        const baseName = currentFile.name.replace(/\.[^.]+$/, "") || "pixelshift";
+        link.href = url;
+        link.download = `${baseName}.pdf`;
+        document.body.append(link);
+        link.click();
+        link.remove();
+        window.setTimeout(() => URL.revokeObjectURL(url), 1000);
+      }
+
+      async function processImage() {
+        if (resultBlob) {
+          downloadPdf();
+          return;
+        }
+        if (!currentFile || selectedTool !== "pdf" || isProcessing) return;
+
+        isProcessing = true;
+        statusState = "loading";
+        setFileStatus("Membuat PDF dari gambar di browser...", statusState);
+        resultPanel.hidden = false;
+        resultPanel.dataset.state = statusState;
+        resultMessage.textContent = "Menyiapkan halaman PDF.";
+        downloadLink.hidden = true;
+        updateAction();
+
+        try {
+          resultBlob = await makePdf(currentFile);
+          resultPanel.dataset.state = "success";
+          resultMessage.textContent = "PDF siap diunduh. File asli tetap berada di perangkat.";
+          downloadLink.hidden = false;
+          resultUrl = URL.createObjectURL(resultBlob);
+          downloadLink.href = resultUrl;
+          downloadLink.download = `${currentFile.name.replace(/\.[^.]+$/, "") || "pixelshift"}.pdf`;
+          setFileStatus(`${currentFile.name} berhasil dikonversi ke PDF.`, "success");
+        } catch (error) {
+          resultBlob = null;
+          resultPanel.dataset.state = "error";
+          resultMessage.textContent =
+            error instanceof Error
+              ? `PDF gagal dibuat. ${error.message} Coba gambar lain atau ulangi.`
+              : "PDF gagal dibuat. Coba gambar lain atau ulangi.";
+          setFileStatus("Konversi gagal. Gambar masih tersedia untuk dicoba kembali.", "error");
+        } finally {
+          isProcessing = false;
+          updateAction();
+        }
+      }
+
+      fileInput.addEventListener("change", () => acceptFile(fileInput.files[0]));
+      replaceButton.addEventListener("click", () => fileInput.click());
+      processButton.addEventListener("click", processImage);
+
+      toolInputs.forEach((input) => {
+        input.addEventListener("change", () => {
+          selectedTool = input.value;
+          clearResult();
+          if (currentFile) {
+            if (selectedTool === "background") {
+              setFileStatus("Penghapusan background belum tersedia karena layanannya belum terhubung.", "notice");
+            } else {
+              setFileStatus(`${currentFile.name} siap dikonversi ke PDF.`);
+            }
+          }
+          updateAction();
+        });
+      });
+
+      dropzone.addEventListener("dragover", (event) => {
+        event.preventDefault();
+        dropzone.dataset.state = "dragging";
+      });
+
+      dropzone.addEventListener("dragleave", (event) => {
+        if (!dropzone.contains(event.relatedTarget)) {
+          dropzone.dataset.state = currentFile ? statusState : "empty";
         }
       });
 
-      dropZone.addEventListener("drop", (event) => {
+      dropzone.addEventListener("drop", (event) => {
         event.preventDefault();
-        dropZone.classList.remove("is-dragging");
-        const file = event.dataTransfer.files[0];
-        if (!file) return;
+        dropzone.dataset.state = currentFile ? statusState : "empty";
+        acceptFile(event.dataTransfer.files[0]);
+      });
 
-        const transfer = new DataTransfer();
-        transfer.items.add(file);
-        pdfInput.files = transfer.files;
-        processPdfImage(file);
+      window.addEventListener("beforeunload", () => {
+        clearPreview();
+        if (resultUrl) URL.revokeObjectURL(resultUrl);
       });
     </script>
   </body>
