@@ -1,1 +1,7 @@
 .env
+
+.agents/
+.claude/
+.cline/
+.cursor/
+.gemini/
