@@ -1,10 +1,10 @@
 {
   "name": "saas-platform",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Workspace PixelShift untuk mengolah gambar di browser.",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node Frontend/server.js",
+    "seo:sitemap": "node scripts/generate-sitemap.js"
   },
   "keywords": [],
   "author": "",
