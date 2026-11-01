@@ -1,7 +1,7 @@
 {
   "name": "saas-platform",
   "version": "1.0.0",
-  "description": "Workspace PixelShift untuk mengolah gambar di browser.",
+  "description": "Workspace Whetkit untuk mengolah gambar di browser.",
   "scripts": {
     "start": "node Frontend/server.js",
     "seo:sitemap": "node scripts/generate-sitemap.js"

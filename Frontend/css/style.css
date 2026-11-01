@@ -108,15 +108,13 @@ a {
 }
 
 .wordmark-mark {
-  display: grid;
+  display: block;
   width: 2rem;
+  height: 2rem;
   aspect-ratio: 1;
-  place-items: center;
+  object-fit: cover;
   border-radius: var(--radius-sm);
-  background: var(--ink);
-  color: var(--surface);
-  font-size: 0.9rem;
-  letter-spacing: 0;
+  background: var(--surface);
 }
 
 .header-context {

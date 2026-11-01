@@ -67,5 +67,5 @@ const server = http.createServer((request, response) => {
 
 const port = Number(process.env.PORT) || 8000;
 server.listen(port, "127.0.0.1", () => {
-  console.log(`PixelShift running at http://127.0.0.1:${port}`);
+  console.log(`Whetkit running at http://127.0.0.1:${port}`);
 });

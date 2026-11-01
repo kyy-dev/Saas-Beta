@@ -1,13 +1,13 @@
-# Saas-Platform
+# Whetkit
 
 ![Rilis](https://img.shields.io/badge/versi-v1.0.0-1b211d)
 ![Status](https://img.shields.io/badge/status-prototipe-a83f20)
-![HTML5](https://img.shields.io/badge/HTML5-landing_page-e34f26?logo=html5&logoColor=white)
+![HTML5](https://img.shields.io/badge/HTML5-image_tools-e34f26?logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-responsif-1572b6?logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-browser_fitur-f7df1e?logo=javascript&logoColor=1b211d)
 ![Lisensi ISC](https://img.shields.io/badge/lisensi-ISC-505a53)
 
-PixelShift menyediakan alat untuk mengolah gambar. Pilih alat dari beranda, lalu gunakan konversi PDF langsung di browser.
+Whetkit menyediakan alat untuk mengolah gambar. Pilih alat dari beranda, lalu gunakan konversi PDF langsung di browser.
 
 > **Status fitur:** konversi gambar menjadi PDF tersedia di browser. Hapus background, kompres gambar, ubah format, ubah ukuran, dan unduh video TikTok masih dalam pengembangan dan belum menerima file atau tautan.
 
@@ -24,6 +24,7 @@ Proyek ini dibangun menggunakan pendekatan hibrida antara otomatisasi kecerdasan
 - **Hapus background:** ditampilkan sebagai alat dalam pengembangan; pemrosesan belum aktif.
 - **Alat gambar lain:** kompres, ubah format, dan ubah ukuran ditampilkan sebagai alat dalam pengembangan.
 - **Unduh video TikTok:** ditampilkan sebagai alat dalam pengembangan; input tautan belum aktif.
+- **Identitas Whetkit:** ikon di `Frontend/icon/icon1.jpg` digunakan sebagai logo dan favicon.
 - **Pratinjau lokal:** browser membaca gambar yang dipilih tanpa mengunggahnya ke server.
 - **Validasi file:** menerima format JPG, PNG, dan WebP, dengan batas ukuran 15 MB.
 - **Tampilan responsif:** tata letak menyesuaikan layar ponsel, tablet, dan desktop.
@@ -86,7 +87,10 @@ Kemudian tambahkan properti domain di Google Search Console, verifikasi kepemili
 │   │   ├── home.js
 │   │   ├── image-to-pdf.js
 │   │   ├── illustrations.js
+│   │   ├── privacy-consent.js
 │   │   └── tools.js
+│   ├── icon
+│   │   └── icon1.jpg
 │   ├── index.html
 │   ├── pdf.html
 │   ├── robots.txt
@@ -103,7 +107,7 @@ Belum ada folder backend karena alat TikTok masih dalam pengembangan.
 
 ### v1.0.0 - Initial Release / Rilisan Pertama
 
-- Menambahkan workspace PixelShift responsif dengan unggah gambar terpusat.
+- Menambahkan workspace Whetkit responsif dengan unggah gambar terpusat.
 - Menyediakan pratinjau lokal, validasi format, dan pembuatan PDF di browser.
 - Menampilkan status integrasi untuk penghapusan background yang belum tersedia.
 
@@ -123,4 +127,3 @@ Dikembangkan oleh **kyy-dev**.
 ## Lisensi
 
 Metadata proyek mencantumkan lisensi **ISC** pada `package.json`.
-#

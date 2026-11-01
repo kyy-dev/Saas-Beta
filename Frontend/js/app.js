@@ -136,7 +136,7 @@ function downloadPdf() {
   if (!resultBlob) return;
   const url = URL.createObjectURL(resultBlob);
   const link = document.createElement("a");
-  const baseName = currentFile.name.replace(/\.[^.]+$/, "") || "pixelshift";
+  const baseName = currentFile.name.replace(/\.[^.]+$/, "") || "whetkit";
   link.href = url;
   link.download = `${baseName}.pdf`;
   document.body.append(link);
@@ -168,7 +168,7 @@ async function processImage() {
     downloadLink.hidden = false;
     resultUrl = URL.createObjectURL(resultBlob);
     downloadLink.href = resultUrl;
-    downloadLink.download = `${currentFile.name.replace(/\.[^.]+$/, "") || "pixelshift"}.pdf`;
+    downloadLink.download = `${currentFile.name.replace(/\.[^.]+$/, "") || "whetkit"}.pdf`;
     setFileStatus(`${currentFile.name} berhasil dikonversi ke PDF.`, "success");
   } catch (error) {
     resultBlob = null;

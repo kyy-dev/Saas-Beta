@@ -9,18 +9,18 @@ dialog.setAttribute("aria-labelledby", "privacy-dialog-title");
 dialog.setAttribute("aria-describedby", "privacy-dialog-intro");
 dialog.innerHTML = `
   <div class="privacy-dialog-header">
-    <p class="eyebrow">PixelShift / Informasi</p>
+    <p class="eyebrow">Whetkit / Informasi</p>
     <h2 id="privacy-dialog-title">Privasi & penggunaan</h2>
     <p id="privacy-dialog-intro">Baca cara gambar diproses dan pilihan yang disimpan di browser.</p>
   </div>
   <div class="privacy-dialog-content">
     <section aria-labelledby="privacy-files-title">
       <h3 id="privacy-files-title">Pemrosesan gambar</h3>
-      <p>Alat PDF membuat file langsung di browser. Gambar yang kamu pilih tidak diunggah ke server PixelShift.</p>
+      <p>Alat PDF membuat file langsung di browser. Gambar yang kamu pilih tidak diunggah ke server Whetkit.</p>
     </section>
     <section aria-labelledby="privacy-data-title">
       <h3 id="privacy-data-title">Data dan cookie</h3>
-      <p>PixelShift tidak meminta nama, email, atau akun. Situs ini tidak memakai cookie analitik atau iklan. Satu cookie fungsional menyimpan persetujuan ini selama 180 hari agar pemberitahuan tidak muncul lagi di setiap kunjungan.</p>
+      <p>Whetkit tidak meminta nama, email, atau akun. Situs ini tidak memakai cookie analitik atau iklan. Satu cookie fungsional menyimpan persetujuan ini selama 180 hari agar pemberitahuan tidak muncul lagi di setiap kunjungan.</p>
     </section>
     <section aria-labelledby="privacy-visits-title">
       <h3 id="privacy-visits-title">Kunjungan ke situs</h3>
